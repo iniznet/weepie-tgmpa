@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ruleset name="TGM Plugin Activation">
+	<description>The code standard for TGMPA is WordPress.</description>
+
+	<file>class-tgm-plugin-activation.php</file>
+	<file>example.php</file>
+
+	<arg name="report" value="full"/>
+	<arg value="sp"/>
+	<arg name="basepath" value="./"/>
+
+	<!-- ##### Sniffs for PHP cross-version compatibility ##### -->
+	<config name="testVersion" value="5.2-"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- ##### Code style ##### -->
+	<rule ref="WordPress-Extra">
+		<!-- This is a conscious choice & known issue and will not be fixed until v 3.0 (if ever). -->
+		<exclude name="Generic.Files.OneObjectStructurePerFile"/>
+
+		<!-- Renaming these protected methods now would break BC. This needs to be left for a next major release. -->
+		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+	</rule>
+
+	<rule ref="WordPress-Docs"/>
+
+	<!-- The value of the below config variable should be in-line with the
+		 "requires at least" version in the readme. -->
+	<config name="minimum_supported_wp_version" value="3.7"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<!-- TGMPA itself uses `tgmpa`, the example file uses `theme-slug`. -->
+			<property name="text_domain" type="array" value="tgmpa,theme-slug"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<!--
+				* Classes are prefixed with `TGM`.
+				* Everything else in the global namespace with `tgmpa`.
+				* The example file uses the example prefix `my_theme`.
+			-->
+			<property name="prefixes" type="array" value="tgmpa,tgm,my_theme,load_tgm" />
+		</properties>
+	</rule>
+
+</ruleset>
