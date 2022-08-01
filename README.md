@@ -1,4 +1,4 @@
-# TGM Plugin Activation
+# Weepie TGM Plugin Activation
 TGM Plugin Activation for Weepie theme.
 
 ## Installation
