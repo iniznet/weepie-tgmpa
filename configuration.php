@@ -12,6 +12,13 @@ function theme_register_plugin() {
 			'force_deactivation' => true,
 		],
 		[
+			'name'        => 'WP Statuses',
+			'slug'        => 'wp-statuses',
+			'source'      => 'https://github.com/imath/wp-statuses/archive/master.zip',
+			'required'    => true,
+			'force_deactivation' => true,
+		],
+		[
 			'name'        => 'Classic Editor (Optional)',
 			'slug'        => 'classic-editor',
 			'required'    => false,
