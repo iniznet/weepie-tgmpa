@@ -9,6 +9,7 @@ function theme_register_plugin() {
 			'slug'        => 'advanced-custom-fields',
 			'is_callable' => 'acf',
 			'required'    => true,
+			'force_activation'   => true,
 			'force_deactivation' => true,
 		],
 		[
@@ -16,13 +17,22 @@ function theme_register_plugin() {
 			'slug'        => 'wp-statuses',
 			'source'      => 'https://github.com/imath/wp-statuses/archive/master.zip',
 			'required'    => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		],
+		[
+			'name'        => 'Dilaz Panel',
+			'slug'        => 'dilaz-panel',
+			'source'      => 'https://github.com/Rodgath/dilaz-panel/archive/main.zip',
+			'required'    => true,
+			'force_activation'   => true,
 			'force_deactivation' => true,
 		],
 		[
 			'name'        => 'Classic Editor (Optional)',
 			'slug'        => 'classic-editor',
 			'required'    => false,
-		]
+		],
 	];
 
 	$config = array(
