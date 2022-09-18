@@ -21,14 +21,6 @@ function theme_register_plugin() {
 			'force_deactivation' => true,
 		],
 		[
-			'name'        => 'Dilaz Panel',
-			'slug'        => 'dilaz-panel',
-			'source'      => 'https://github.com/Rodgath/dilaz-panel/archive/main.zip',
-			'required'    => true,
-			'force_activation'   => true,
-			'force_deactivation' => true,
-		],
-		[
 			'name'        => 'Classic Editor (Optional)',
 			'slug'        => 'classic-editor',
 			'required'    => false,
