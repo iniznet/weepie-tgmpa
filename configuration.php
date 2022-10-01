@@ -25,6 +25,11 @@ function theme_register_plugin() {
 			'slug'        => 'classic-editor',
 			'required'    => false,
 		],
+		[
+			'name'        => 'MY Missed Schedule (Optional)',
+			'slug'        => 'my-missed-schedule',
+			'required'    => false,
+		],
 	];
 
 	$config = array(
