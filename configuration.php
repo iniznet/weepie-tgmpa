@@ -30,6 +30,11 @@ function theme_register_plugin() {
 			'slug'        => 'my-missed-schedule',
 			'required'    => false,
 		],
+		[
+			'name'        => 'User Switching (Optional)',
+			'slug'        => 'user-switching',
+			'required'    => false,
+		],
 	];
 
 	$config = array(
